@@ -4,6 +4,7 @@ const COLORS = {
   primary: '#25316D',
   secondary: '#fa9e1b',
   primaryLight: '#5BC0F8',
+  primaryLight3: '#e8f1fb',
   tertiary: '#FF7754',
   gray: '#83829A',
   gray2: '#C1C0C8',

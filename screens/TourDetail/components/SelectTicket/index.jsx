@@ -1,5 +1,5 @@
-import { FlatList, Text, View } from "react-native";
-import React, { memo, useRef } from "react";
+import { FlatList, Text, View, Button } from "react-native";
+import React, { memo, useRef, useState } from "react";
 import { SIZES, COLORS } from "../../../../constants";
 import styles from "./styles";
 import { Entypo } from "@expo/vector-icons";
@@ -17,11 +17,6 @@ const list = [
   { id: 6, date: "Fri", month: "17, Sep" },
 ];
 const SelectTicket = memo(() => {
-  const bottomSheetModalRef = useRef(null);
-  const snapPoint = ["48%"];
-  const handleSelectDate = () => {
-    bottomSheetModalRef.current?.present();
-  };
   return (
     <View>
       <View style={styles.boxTitleSelect}>
@@ -39,7 +34,7 @@ const SelectTicket = memo(() => {
         </Text>
       </View>
       <View style={styles.containerSelectDate}>
-        <TouchableOpacity style={styles.boxItemDate} onPress={handleSelectDate}>
+        <TouchableOpacity style={styles.boxItemDate}>
           <FontAwesome5
             name="calendar-alt"
             size={18}

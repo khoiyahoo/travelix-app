@@ -3,52 +3,66 @@ import { COLORS, SIZES } from '../../../../constants'
 
 const styles = StyleSheet.create({
   container: {
-    marginHorizontal: SIZES.small,
-    marginTop: SIZES.medium,
     borderBottomWidth: 1,
-    borderBottomColor: COLORS.gray2,
-    paddingBottom: 12,
+    borderColor: COLORS.gray,
   },
-  title: {
-    fontSize: SIZES.xLarge,
-    fontFamily: 'bold',
+  boxDesc: {
+    // paddingTop: 12,
+    // paddingBottom: 0,
+    paddingHorizontal: 12,
   },
-  wrapperRate: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'flex-start',
+  titleSection: {
+    fontSize: SIZES.large,
+    fontWeight: '600',
   },
-  boxRate: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'flex-start',
+  boxDescSub: {
+    paddingTop: 12,
+    paddingBottom: 0,
+    paddingHorizontal: 12,
   },
-  rate: {
-    fontSize: SIZES.medium,
-    color: COLORS.primaryLight,
-    fontFamily: 'semibold',
-    marginLeft: 8,
+  dot: {
+    backgroundColor: 'black',
+    width: 6,
+    height: 6,
+    borderRadius: 4,
+    marginRight: 16,
   },
-  review: {
-    fontSize: SIZES.medium,
-    marginLeft: 8,
-  },
-  containerDate: {
-    padding: 12,
-    gap: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: COLORS.gray2,
-  },
-  boxDate: {
+  itemSub: {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
+    marginTop: 12,
   },
-  textDate: {
-    color: COLORS.gray,
-    marginLeft: 10,
-    marginRight: 10,
-    flex: 1,
+  buttonReadMore: {
+    paddingTop: 12,
+    alignSelf: 'center',
+    width: '50%',
+  },
+  boxImageCol: {
+    width: '50%',
+    height: 300,
+  },
+  boxImageRow: {
+    width: '100%',
+    height: 150,
+    marginLeft: 12,
+  },
+  boxImgRowTop: {
+    paddingBottom: 12,
+  },
+  image: {
+    width: '100%',
+    height: '100%',
+    borderRadius: 8,
+  },
+  boxGoodFor: {
+    padding: 12,
+    display: 'flex',
+    flexDirection: 'row',
+  },
+  goodFor: {
+    fontSize: SIZES.medium,
+    fontWeight: '600',
   },
 })
 

@@ -1,4 +1,4 @@
-import { FlatList, Text, View } from "react-native";
+import { FlatList, Text, View, Image } from "react-native";
 import React, { memo } from "react";
 import { SIZES, COLORS } from "../../../../constants";
 import styles from "./styles";
@@ -6,48 +6,78 @@ import { Entypo } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 import { TouchableOpacity } from "react-native";
+
+import Button, { BtnType } from "../../../../components/common/Button";
+
 const SectionTour = () => {
   return (
-    <View>
-      <View style={styles.container}>
+    <View style={styles.container}>
+      <View style={styles.boxDesc}>
         <View>
-          <Text style={styles.title}>
-            Four islans Excursion in South Phu Quoc - Day Tour
-          </Text>
-          <View style={styles.wrapperRate}>
-            <View style={styles.boxRate}>
-              <Entypo
-                name="location"
-                size={24}
-                color={`${COLORS.primaryLight}`}
-              />
-              <Text style={styles.rate}>9.1 Excellent</Text>
-            </View>
-            <View style={styles.boxReview}>
-              <Text style={styles.review}>(from 28 reviews)</Text>
-            </View>
+          <Text style={styles.titleSection}>What You'll Experience</Text>
+        </View>
+        <View style={styles.boxDescSub}>
+          <View style={styles.itemSub}>
+            <View style={styles.dot}></View>
+            <Text style={{ fontSize: SIZES.medium }}>
+              Feel your heart race as you experience thrilling rides such as
+              Skydrop, Disk-O, Swing Carousel, and more
+            </Text>
+          </View>
+          <View style={styles.itemSub}>
+            <View style={styles.dot}></View>
+            <Text style={{ fontSize: SIZES.medium }}>
+              Feel your heart race as you experience thrilling rides such as
+              Skydrop, Disk-O, Swing Carousel, and more
+            </Text>
           </View>
         </View>
       </View>
-      <View style={styles.containerDate}>
-        <View style={styles.boxDate}>
-          <FontAwesome5 name="calendar-alt" size={18} color="black" />
-          <Text style={styles.textDate}>Tour Date | Thu, 21 Sep 2023</Text>
+      <View style={styles.buttonReadMore}>
+        <Button
+          title={"Read more"}
+          style={styles.button}
+          btnType={BtnType.Outlined}
+        />
+      </View>
+      <View
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          padding: 12,
+          paddingRight: 24,
+        }}
+      >
+        <View style={styles.boxImageCol}>
+          <Image
+            source={{
+              uri: "https://ik.imagekit.io/tvlk/image/imageResource/2023/06/14/1686721948003-7928a0b56734caaca663b9239cde96da.png?tr=q-75,w-427",
+            }}
+            style={styles.image}
+          />
         </View>
-        <View style={styles.boxDate}>
-          <FontAwesome5 name="clock" size={18} color="black" />
-          <Text style={styles.textDate}>Tour Date | Thu, 21 Sep 2023</Text>
-        </View>
-        <TouchableOpacity style={styles.boxDate}>
-          <Entypo name="location-pin" size={18} color="black" />
-
-          <Text style={styles.textDate} numberOfLines={1}>
-            100/2, Xã Hòa Bắc,Huyện Hòa Vang, Thành phố Đà Nẵng ewrwerwerwer
-          </Text>
-          <View>
-            <AntDesign name="right" size={18} color={`${COLORS.gray2}`} />
+        <View style={styles.boxImageCol}>
+          <View style={[styles.boxImageRow, styles.boxImgRowTop]}>
+            <Image
+              source={{
+                uri: "https://ik.imagekit.io/tvlk/image/imageResource/2023/06/14/1686721948003-7928a0b56734caaca663b9239cde96da.png?tr=q-75,w-427",
+              }}
+              style={styles.image}
+            />
           </View>
-        </TouchableOpacity>
+          <View style={styles.boxImageRow}>
+            <Image
+              source={{
+                uri: "https://ik.imagekit.io/tvlk/image/imageResource/2023/06/14/1686721948003-7928a0b56734caaca663b9239cde96da.png?tr=q-75,w-427",
+              }}
+              style={styles.image}
+            />
+          </View>
+        </View>
+      </View>
+      <View style={styles.boxGoodFor}>
+        <Text style={styles.goodFor}>Good for: </Text>
+        <Text style={{ fontSize: SIZES.medium }}>Sea, Family, Relax</Text>
       </View>
     </View>
   );
